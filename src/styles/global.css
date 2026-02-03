@@ -1,0 +1,132 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+/* Base body */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: var(--text-dark);
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: darken(var(--primary), 10%);
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+  margin: 0 0 12px 0;
+  color: #555;
+}
+
+/* Buttons (basic reset, overridden by component CSS) */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+  margin: 0 0 12px 0;
+}
+
+/* Inputs and Textareas */
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+}
+
+/* Section padding */
+section {
+  padding: 60px 0;
+}
+
+/* Container reuse */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   RESPONSIVE TYPOGRAPHY
+========================= */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  body { font-size: 14px; }
+}

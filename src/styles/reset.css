@@ -1,0 +1,105 @@
+/* =========================
+   RESET / NORMALIZE CSS
+========================= */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default body margin */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: inherit;
+  background: none;
+  color: inherit;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Remove default form styles */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Remove image spacing */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Blockquotes reset */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+/* Headings reset */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Horizontal rule reset */
+hr {
+  border: 0;
+  height: 1px;
+  background: #e6e6e6;
+}
+
+/* Form elements reset */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default scroll behavior */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,36 @@
+/* =========================
+   ROOMS PAGE BASE
+========================= */
+.rooms-page {
+  width: 100%;
+}
+
+/* Reuse container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   ROOMS SECTION
+========================= */
+.rooms-section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .rooms-section {
+    padding: 40px 0;
+  }
+}

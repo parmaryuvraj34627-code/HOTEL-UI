@@ -1,0 +1,30 @@
+.page-title {
+  background: #f6f6f6;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.page-title-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 36px 20px;
+}
+
+.page-title h1 {
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.page-title-subtitle {
+  font-size: 15px;
+  color: #666;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page-title h1 {
+    font-size: 22px;
+  }
+}

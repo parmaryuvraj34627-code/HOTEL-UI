@@ -1,0 +1,56 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root {
+  /* Primary Brand Colors */
+  --primary: #7b2c21;       /* Dark red / hotel brand color */
+  --secondary: #d8c38b;     /* Light beige / background */
+
+  /* Text Colors */
+  --text-dark: #333333;     /* Main text */
+  --text-light: #ffffff;    /* Light text for dark backgrounds */
+  --text-muted: #555555;    /* Subtext / descriptions */
+
+  /* Background Colors */
+  --bg-light: #ffffff;      /* Card / section background */
+  --bg-dark: #222222;       /* Footer / overlay backgrounds */
+
+  /* Border Colors */
+  --border-light: #e6e6e6;
+  --border-dark: #cccccc;
+
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+
+  /* Box Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* Transition */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Z-index */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-dropdown: 1500;
+}

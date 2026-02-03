@@ -1,0 +1,193 @@
+/* =========================
+   HOME PAGE BASE
+========================= */
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Common container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+/* Overlay text on slider */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.home-about {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.home-about h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.home-about h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #c59d5f;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.home-about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* =========================
+   ROOMS SECTION
+========================= */
+.home-rooms {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.view-all {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c59d5f;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.home-cta {
+  padding: 80px 20px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/images/hero.jpg") center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+.home-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .hero-overlay h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    height: 55vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-about h2,
+  .section-header h2,
+  .home-cta h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 24px;
+  }
+
+  .home-about,
+  .home-rooms {
+    padding: 40px 0;
+  }
+
+  .home-cta {
+    padding: 50px 20px;
+  }
+}

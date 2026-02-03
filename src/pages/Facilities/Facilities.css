@@ -1,0 +1,69 @@
+/* =========================
+   FACILITIES PAGE
+========================= */
+.facilities-page {
+  width: 100%;
+}
+
+/* Reuse container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   FACILITIES SECTION
+========================= */
+.facilities-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+/* Facility Card */
+.facility-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.facility-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.facility-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.facility-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .facilities-section {
+    padding: 40px 0;
+  }
+}
