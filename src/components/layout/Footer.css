@@ -1,7 +1,13 @@
+/* footer.css */
+
+/* Main Footer Styles */
 .footer {
-  background: #1f1f1f;
-  color: #ddd;
+  background-color: #222; /* main footer background */
+  color: #fff; /* merged color */
   margin-top: 60px;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
@@ -11,6 +17,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+  text-align: left;
 }
 
 .footer-title {
@@ -49,19 +56,33 @@
   color: var(--secondary);
 }
 
-.footer-contact {
+/* Contact Info */
+.footer-contact,
+footer .contact {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 14px;
   margin-bottom: 12px;
+  justify-content: flex-start; /* default alignment */
 }
 
+/* For SVG icons and images */
+.footer-contact svg,
+footer .contact svg,
 .footer-contact img {
   width: 18px;
   height: 18px;
 }
 
+/* Footer paragraphs */
+footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Bottom Bar */
 .footer-bottom {
   background: #141414;
   text-align: center;
@@ -76,7 +97,8 @@
     text-align: center;
   }
 
-  .footer-contact {
+  .footer-contact,
+  footer .contact {
     justify-content: center;
   }
 }

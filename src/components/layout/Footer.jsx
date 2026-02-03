@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PhoneIcon from "../../assets/icons/Phone.svg";
 import mailIcon from "../../assets/icons/mail.svg";
 import locationIcon from "../../assets/icons/location.svg";
-import "./footer.css";
+import "./Footer.css";
 
 export default function Footer() {
   return (
