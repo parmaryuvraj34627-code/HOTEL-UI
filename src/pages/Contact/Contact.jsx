@@ -1,8 +1,26 @@
+import React, { useState } from "react";
 import PageTitle from "../../components/common/PageTitle";
 import Button from "../../components/common/Button";
 import "./contact.css";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Message sent!");
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
     <main className="contact-page">
       {/* Page Title */}
@@ -25,26 +43,44 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="contact-form">
-            <form
-              action="#"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Form submitted! (demo only)");
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  required
+                ></textarea>
               </div>
 
               <Button type="submit">Send Message</Button>
