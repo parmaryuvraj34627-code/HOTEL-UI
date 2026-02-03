@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import phoneIcon from "../../assets/icons/phone.svg";
+import PhoneIcon from "../../assets/icons/Phone.svg";
 import mailIcon from "../../assets/icons/mail.svg";
 import locationIcon from "../../assets/icons/location.svg";
 import "./footer.css";
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-contact">
-            <img src={phoneIcon} alt="Phone" />
+            <img src={PhoneIcon} alt="Phone" />
             <span>+91 98765 43210</span>
           </div>
 
