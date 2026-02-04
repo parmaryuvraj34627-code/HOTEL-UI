@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PageTitle from "../../components/common/PageTitle";
 import Modal from "../../components/ui/Modal";
-import "./gallery.css";
+import "./Gallery.css";
 
 // Example gallery images (stored in public/images)
 const galleryImages = [
@@ -29,20 +29,39 @@ export default function Gallery() {
         subtitle="Explore our rooms, facilities, and scenic riverfront views"
       />
 
-      {/* Gallery Grid */}
-      <section className="gallery-section">
-        <div className="container gallery-grid">
-          {galleryImages.map((img, index) => (
-            <div
-              key={index}
-              className="gallery-item"
-              onClick={() => handleImageClick(img)}
-            >
-              <img src={img} alt={`Gallery ${index + 1}`} loading="lazy" />
-            </div>
-          ))}
+      {/* Dynamic Gallery Grid */}
+      {galleryImages && galleryImages.length > 0 ? (
+        <section className="gallery-section">
+          <div className="container gallery-grid">
+            {galleryImages.map((img, index) => (
+              <div
+                key={index}
+                className="gallery-item"
+                onClick={() => handleImageClick(img)}
+              >
+                <img src={img} alt={`Gallery ${index + 1}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : (
+        // Fallback / Simple gallery
+        <div className="gallery-container">
+          <h1>Gallery</h1>
+          <div className="gallery-images">
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Sample 1"
+              className="gallery-image"
+            />
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Sample 2"
+              className="gallery-image"
+            />
+          </div>
         </div>
-      </section>
+      )}
 
       {/* Modal Lightbox */}
       <Modal

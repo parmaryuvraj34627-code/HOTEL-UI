@@ -58,6 +58,34 @@
 }
 
 /* =========================
+   FALLBACK / SIMPLE GALLERY
+========================= */
+.gallery-container {
+  padding: 20px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.gallery-container h1 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
@@ -73,5 +101,9 @@
 @media (max-width: 480px) {
   .gallery-item img {
     height: 120px;
+  }
+
+  .gallery-images {
+    gap: 14px;
   }
 }

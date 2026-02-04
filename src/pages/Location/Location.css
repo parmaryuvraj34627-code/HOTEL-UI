@@ -49,6 +49,31 @@
 }
 
 /* =========================
+   FALLBACK / SIMPLE LOCATION
+========================= */
+.location-container {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.location-container h1 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
