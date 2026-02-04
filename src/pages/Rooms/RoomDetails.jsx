@@ -4,7 +4,7 @@ import Button from "../../components/common/Button";
 import Modal from "../../components/ui/Modal";
 import { rooms } from "../../data/roomsData";
 import { useState } from "react";
-import "./roomDetails.css";
+import "./RoomDetails.css";
 
 export default function RoomDetails() {
   const { id } = useParams();
@@ -19,11 +19,23 @@ export default function RoomDetails() {
   });
 
   if (!room) {
+    // Fallback for room not found
     return (
       <main className="room-details-page">
         <PageTitle title="Room Not Found" />
         <div className="container">
           <p>Sorry, the requested room does not exist.</p>
+
+          {/* Static fallback example from simpler component */}
+          <div className="room-details">
+            <h1>Room Details</h1>
+            <div className="room-info">
+              <h2>Deluxe Room</h2>
+              <p>Spacious room with AC, WiFi, and balcony.</p>
+              <p>Price: $120 / night</p>
+            </div>
+          </div>
+
           <Link to="/rooms">
             <Button>Back to Rooms</Button>
           </Link>
@@ -56,40 +68,31 @@ export default function RoomDetails() {
       <section className="room-details-section">
         <div className="container room-details-grid">
 
-          {/* Image */}
+          {/* Room Image */}
           <div className="room-details-image">
             <img src={room.image} alt={room.name} />
           </div>
 
-          {/* Info */}
+          {/* Room Info */}
           <div className="room-details-info">
             <h2>{room.name}</h2>
             <p className="room-details-desc">{room.description}</p>
-
             <p className="room-details-price">
               ₹{room.price} <span>/ night</span>
             </p>
 
             <div className="room-details-actions">
-              <Button onClick={() => setOpen(true)}>
-                Book This Room
-              </Button>
-
+              <Button onClick={() => setOpen(true)}>Book This Room</Button>
               <Link to="/rooms">
                 <Button variant="outline">Back to Rooms</Button>
               </Link>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* Booking Modal */}
-      <Modal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        title="Book This Room"
-      >
+      <Modal isOpen={open} onClose={() => setOpen(false)} title="Book This Room">
         <form className="booking-form" onSubmit={handleSubmit}>
           <label>
             Full Name

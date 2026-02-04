@@ -15,10 +15,7 @@ export default function Home() {
   return (
     <main className="home-page">
       {/* Simple Home Intro */}
-      <section className="home">
-        <h1>Home Page</h1>
-        <p>Welcome to the home page</p>
-      </section>
+     
 
       {/* Hero Slider */}
       <section className="home-hero">
