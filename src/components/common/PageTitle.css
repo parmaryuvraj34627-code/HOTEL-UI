@@ -1,6 +1,14 @@
+/* =========================
+   PAGE TITLE
+========================= */
 .page-title {
   background: #f6f6f6;
   border-bottom: 1px solid #e4e4e4;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .page-title-container {

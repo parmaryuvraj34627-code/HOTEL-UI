@@ -28,18 +28,7 @@ export default function Rooms() {
         </div>
       </section>
 
-      {/* Static Example Cards (optional / demo) */}
-      <section className="rooms-container">
-        <div className="room-card">
-          <h2>Deluxe Room</h2>
-          <p>Comfortable room with sea view</p>
-        </div>
-
-        <div className="room-card">
-          <h2>Standard Room</h2>
-          <p>Perfect for short stays</p>
-        </div>
-      </section>
+      
     </main>
   );
 }

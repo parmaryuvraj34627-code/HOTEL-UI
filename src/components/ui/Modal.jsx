@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./modal.css";
+import "./Modal.css";
 
 export default function Modal({ isOpen, onClose, title, children }) {
   // Close on ESC key
@@ -11,7 +11,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // prevent background scroll
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
@@ -30,17 +30,17 @@ export default function Modal({ isOpen, onClose, title, children }) {
         aria-modal="true"
       >
         {/* Header */}
-        <div className="modal-header">
-          {title && <h3 className="modal-title">{title}</h3>}
-          <button className="modal-close" onClick={onClose}>
-            ×
-          </button>
-        </div>
+        {(title || onClose) && (
+          <div className="modal-header">
+            {title && <h3 className="modal-title">{title}</h3>}
+            <button className="modal-close" onClick={onClose}>
+              ×
+            </button>
+          </div>
+        )}
 
         {/* Content */}
-        <div className="modal-body">
-          {children}
-        </div>
+        <div className="modal-body">{children}</div>
       </div>
     </div>
   );

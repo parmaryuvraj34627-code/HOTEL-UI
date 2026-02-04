@@ -1,6 +1,7 @@
-import "./pageTitle.css";
+import React from "react";
+import "./PageTitle.css";
 
-export default function PageTitle({ title, subtitle }) {
+const PageTitle = ({ title, subtitle }) => {
   return (
     <section className="page-title">
       <div className="page-title-container">
@@ -9,4 +10,6 @@ export default function PageTitle({ title, subtitle }) {
       </div>
     </section>
   );
-}
+};
+
+export default PageTitle;
