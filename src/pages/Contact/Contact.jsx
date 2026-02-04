@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PageTitle from "../../components/common/PageTitle";
 import Button from "../../components/common/Button";
-import "./contact.css";
+import "./Contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -29,10 +29,15 @@ export default function Contact() {
         subtitle="We’d love to hear from you. Get in touch for bookings or inquiries."
       />
 
+      {/* Simple Contact Info (from basic component) */}
+      <section className="contact-container">
+        <h1>Contact Us</h1>
+        <p>Email: contact@example.com</p>
+      </section>
+
       {/* Contact Section */}
       <section className="contact-section">
         <div className="container contact-grid">
-          
           {/* Contact Info */}
           <div className="contact-info">
             <h2>Hotel Riverfront</h2>
@@ -86,7 +91,6 @@ export default function Contact() {
               <Button type="submit">Send Message</Button>
             </form>
           </div>
-
         </div>
 
         {/* Map */}
@@ -102,7 +106,6 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-
       </section>
     </main>
   );

@@ -15,6 +15,23 @@
   margin-bottom: 20px;
 }
 
+/* =========================
+   SIMPLE CONTACT CONTAINER
+========================= */
+.contact-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  color: #333;
+}
+
+.contact-container p {
+  font-size: 18px;
+  color: #666;
+}
+
 /* Reuse container */
 .container {
   max-width: 1200px;
@@ -51,7 +68,9 @@
   margin-bottom: 8px;
 }
 
-/* Contact Form */
+/* =========================
+   CONTACT FORM
+========================= */
 .contact-form form,
 .contact-page form {
   display: flex;
@@ -91,7 +110,9 @@
   border-color: var(--primary);
 }
 
-/* Contact Page Button */
+/* =========================
+   CONTACT PAGE BUTTON
+========================= */
 .contact-page button {
   padding: 10px;
   background-color: #222;
@@ -106,7 +127,9 @@
   background-color: #555;
 }
 
-/* Map */
+/* =========================
+   MAP
+========================= */
 .contact-map {
   width: 100%;
   margin-top: 20px;
@@ -133,5 +156,13 @@
   .contact-page form {
     width: 100%;
     gap: 12px;
+  }
+
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container p {
+    font-size: 16px;
   }
 }
