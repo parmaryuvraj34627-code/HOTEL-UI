@@ -3,7 +3,7 @@ import RoomCard from "../../components/common/RoomCard";
 import Button from "../../components/common/Button";
 import { rooms } from "../../data/roomsData";
 import { Link } from "react-router-dom";
-import "./home.css";
+import "./Home.css";
 
 export default function Home() {
   const sliderImages = [
@@ -14,10 +14,15 @@ export default function Home() {
 
   return (
     <main className="home-page">
+      {/* Simple Home Intro */}
+      <section className="home">
+        <h1>Home Page</h1>
+        <p>Welcome to the home page</p>
+      </section>
+
       {/* Hero Slider */}
       <section className="home-hero">
         <ImageSlider images={sliderImages} />
-       
       </section>
 
       {/* About Section */}
@@ -50,7 +55,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Call to Action */}
       <section className="home-cta">
         <h2>Ready to Book Your Stay?</h2>
         <Link to="/contact">
