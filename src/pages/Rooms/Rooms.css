@@ -5,7 +5,40 @@
   width: 100%;
 }
 
-/* Reuse container */
+/* =========================
+   SIMPLE ROOMS CONTAINER
+========================= */
+.rooms-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.rooms-container h1 {
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Static demo room cards */
+.room-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.room-card h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.room-card p {
+  color: #666;
+}
+
+/* =========================
+   REUSABLE CONTAINER
+========================= */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -13,7 +46,7 @@
 }
 
 /* =========================
-   ROOMS SECTION
+   ROOMS SECTION (MAIN GRID)
 ========================= */
 .rooms-section {
   padding: 60px 0;
@@ -32,5 +65,13 @@
 @media (max-width: 768px) {
   .rooms-section {
     padding: 40px 0;
+  }
+
+  .rooms-container {
+    padding: 20px;
+  }
+
+  .room-card {
+    margin: 12px auto;
   }
 }
