@@ -1,11 +1,21 @@
 /* =========================
-   FACILITIES PAGE
+   FACILITIES PAGE BASE
 ========================= */
 .facilities-page {
   width: 100%;
 }
 
-/* Reuse container */
+/* =========================
+   SIMPLE CONTAINER (FALLBACK/WRAPPER)
+========================= */
+.facilities-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   REUSABLE CONTAINER
+========================= */
 .container {
   max-width: 1200px;
   margin: auto;
